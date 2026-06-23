@@ -1,29 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Password</title>
+<meta charset="UTF-8">
+<title>Happy 7th Anniversary ❤️</title>
+
+<style>
+body{
+background:#ffd6e7;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Arial;
+}
+
+.box{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 20px pink;
+}
+
+h1{
+color:#ff4f87;
+}
+
+input{
+padding:10px;
+border-radius:10px;
+border:1px solid pink;
+}
+
+button{
+padding:10px 20px;
+background:#ff7aa8;
+color:white;
+border:none;
+border-radius:10px;
+margin-top:10px;
+}
+
+#error{
+color:red;
+}
+</style>
 </head>
 
-<body style="text-align:center; margin-top:100px; font-family:sans-serif;">
+<body>
 
-<h2>Enter Password</h2>
+<div class="box">
+<h1>❤️ Only You Can Unlock My Heart ❤️</h1>
 
-<input type="password" id="pass" placeholder="Password">
+<p>Enter our secret password 🌷</p>
+
+<input type="password" id="password">
 
 <br><br>
 
-<button onclick="checkPassword()">Enter</button>
+<button onclick="checkPassword()">
+Open My Heart ❤️
+</button>
+
+<p id="error"></p>
+
+</div>
 
 <script>
-function checkPassword(){
-let pass=document.getElementById("pass").value;
 
-if(pass==="25619"){
+function checkPassword(){
+
+let pass=document.getElementById("password").value;
+
+if(pass=="25619"){
 window.location.href="love.html";
-}else{
-alert("Wrong password");
 }
+
+else{
+document.getElementById("error").innerHTML="Wrong password ☹️";
 }
+
+}
+
 </script>
 
 </body>
